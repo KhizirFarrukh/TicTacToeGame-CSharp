@@ -41,6 +41,7 @@
             this.WinnerText = new System.Windows.Forms.Label();
             this.ResetBtn = new System.Windows.Forms.Button();
             this.TurnText = new System.Windows.Forms.Label();
+            this.PlayWithAI = new System.Windows.Forms.CheckBox();
             this.TicTacToeBoard.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -182,11 +183,22 @@
             this.TurnText.TabIndex = 3;
             this.TurnText.Text = "Turn: ";
             // 
+            // PlayWithAI
+            // 
+            this.PlayWithAI.Location = new System.Drawing.Point(255, 347);
+            this.PlayWithAI.Name = "PlayWithAI";
+            this.PlayWithAI.Size = new System.Drawing.Size(59, 18);
+            this.PlayWithAI.TabIndex = 0;
+            this.PlayWithAI.Text = "with AI";
+            this.PlayWithAI.UseVisualStyleBackColor = true;
+            this.PlayWithAI.CheckedChanged += new System.EventHandler(this.PlayWithAI_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(326, 423);
+            this.Controls.Add(this.PlayWithAI);
             this.Controls.Add(this.TurnText);
             this.Controls.Add(this.ResetBtn);
             this.Controls.Add(this.WinnerText);
@@ -214,6 +226,7 @@
         private System.Windows.Forms.Label WinnerText;
         private System.Windows.Forms.Button ResetBtn;
         private System.Windows.Forms.Label TurnText;
+        private System.Windows.Forms.CheckBox PlayWithAI;
     }
 }
 

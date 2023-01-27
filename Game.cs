@@ -12,14 +12,15 @@ namespace TicTacToe
         private string player1Char;
         private string player2Char;
         public string currentPlayer;
-        public Game(string GameBoard, string player1Char, string player2Char)
+        public Game(string player1Char, string player2Char)
         {
-            this.GameBoard = GameBoard;
+            this.GameBoard = "000000000";
             this.player1Char = player1Char;
             this.player2Char = player2Char;
             currentPlayer = this.player1Char;
         }
         public string getGameBoard() { return GameBoard; }
+        public void clearBoard() { GameBoard = "000000000"; }
         public void makeMove(int pos)
         {
             char[] modifiedString = GameBoard.ToCharArray();
